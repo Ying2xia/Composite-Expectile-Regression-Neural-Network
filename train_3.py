@@ -17,7 +17,7 @@ param_config = {
     'learning_rate': 1e-2,
     'distribution': 'chi2',
     'hidden_size_range': list(range(1, 11)),
-    'l2_lambda_range': np.arange(0.0001, 0.0011, 0.0001),
+    'l2_lambda_range': np.arange(0, 0.0011, 0.0001),
     'device': 'cuda' if torch.cuda.is_available() else 'cpu',
     'model_save_path': 'model/Trivariate/K={}_distribution={}_hiddensize={}_λ={}_mae={}_rmse={}.pth'
 }
