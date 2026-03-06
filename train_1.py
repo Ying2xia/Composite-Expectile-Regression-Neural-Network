@@ -7,10 +7,6 @@ from generate_data import *
 from itertools import product
 from torch.utils.data import DataLoader
 
-# change K, distribution and data_generator every time before start
-# When K=3, epochs=1000, batch_size=64, lr=5e-4
-# When K=5, epochs=1000, batch_size=64, lr=1e-2
-# When K=9, epochs=1000 ,batch_size=64, lr=5e-2
 param_config = {
     'K': 9,
     'epochs': 1000,
@@ -20,7 +16,7 @@ param_config = {
     'early_stop': 20000,
     'learning_rate': 1e-3,
     'distribution': 'chi2',
-    'hidden_size_range': list(range(1, 6)),
+    'hidden_size_range': list(range(1, 11)),
     'l2_lambda_range': np.arange(0, 0.0011, 0.0001),
     'device': 'cuda' if torch.cuda.is_available() else 'cpu',
     'model_save_path': 'model/Univariate/K={}_distribution={}_hiddensize={}_λ={}_mae={}_rmse={}.pth'
