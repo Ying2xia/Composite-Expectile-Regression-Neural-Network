@@ -16,7 +16,7 @@ param_config = {
     'learning_rate': 1e-2,
     'distribution': 'chi2',
     'expectile_level': 0.8,
-    'hidden_size_range': list(range(1, 6)),
+    'hidden_size_range': list(range(1, 11)),
     'device': 'cuda' if torch.cuda.is_available() else 'cpu',
     'model_save_path': 'model/Trivariate/τ={}_distribution={}_hiddensize={}_mae={}_rmse={}.pth'
 }
